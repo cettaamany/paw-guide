@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paw Guide - Sahabat Hewan</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="logo">Paw Guide 🐾</div>
+    </header>
+
+    <main id="main-content">
+        
+        <section id="home" class="page active">
+            <header class="hero">
+                <h1>Temukan Sahabat Barumu</h1>
+                <p>Panduan lengkap merawat hewan & adopsi.</p>
+                <input type="text" id="searchBar" placeholder="Cari hewan atau tips..." onkeyup="searchAnimal()">
+            </header>
+
+            <div class="container">
+                <h2>Kategori</h2>
+                <div class="categories">
+                    <div class="card-cat">🐱 Kucing</div>
+                    <div class="card-cat">🐶 Anjing</div>
+                    <div class="card-cat">🐰 Kelinci</div>
+                </div>
+
+                <h2>Rekomendasi Populer</h2>
+                <div id="popular-list" class="grid-container">
+                    <p>Sedang memuat data...</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="detail" class="page">
+            <div class="container">
+                <button onclick="showPage('home')" class="btn-back">← Kembali</button>
+                <div id="animal-detail-content"></div>
+            </div>
+        </section>
+
+        <section id="tips" class="page">
+            <div class="container">
+                <h2>Tips Perawatan</h2>
+                <div id="tips-list" class="list-group"></div>
+            </div>
+        </section>
+
+        <section id="tips-detail" class="page">
+            <div class="container">
+                <button onclick="showPage('tips')" class="btn-back">← Kembali ke Tips</button>
+                <div id="tips-detail-content" class="card" style="padding: 20px; margin-top: 15px;">
+                    </div>
+            </div>
+        </section>
+
+        <section id="adoption" class="page">
+            <div class="container">
+                <h2>Shelter Semarang</h2>
+                <p>Temukan teman baru di sini.</p>
+                <div id="shelter-list" class="grid-container"></div>
+            </div>
+        </section>
+
+        <section id="profile" class="page">
+            <div class="container profile-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="User" class="profile-pic">
+                <h2 id="username">Mahasiswa Teknik</h2>
+                <p>21120123140176</p>
+                <button onclick="toggleDarkMode()" class="btn-primary">Mode Gelap / Terang</button>
+            </div>
+        </section>
+    </main>
+
+    <nav class="bottom-nav">
+        <a href="#" class="nav-item active" onclick="showPage('home', this)">
+            <span class="icon">🏠</span>
+            <span class="label">Home</span>
+        </a>
+        <a href="#" class="nav-item" onclick="showPage('tips', this)">
+            <span class="icon">💡</span>
+            <span class="label">Tips</span>
+        </a>
+        <a href="#" class="nav-item" onclick="showPage('adoption', this)">
+            <span class="icon">🏥</span>
+            <span class="label">Adopsi</span>
+        </a>
+        <a href="#" class="nav-item" onclick="showPage('profile', this)">
+            <span class="icon">👤</span>
+            <span class="label">Profil</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
